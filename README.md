@@ -1,12 +1,12 @@
-# Implementation of Univariate Linear Regression
-## AIM:
+## Implementation of Univariate Linear Regression
+# AIM:
 To implement univariate Linear Regression to fit a straight line using least squares.
 
-## Equipments Required:
+# EQUIPMENTS REQUIRED:
 1. Hardware – PCs
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
-## Algorithm
+# ALGORITHM:
 1. Get the independent variable X and dependent variable Y.
 2. Calculate the mean of the X -values and the mean of the Y -values.
 3. Find the slope m of the line of best fit using the formula. 
@@ -16,18 +16,77 @@ To implement univariate Linear Regression to fit a straight line using least squ
 5. Use the slope m and the y -intercept to form the equation of the line.
 6. Obtain the straight line equation Y=mX+b and plot the scatterplot.
 
-## Program:
+# PROGRAM:
 ```
 /*
 Program to implement univariate Linear Regression to fit a straight line using least squares.
-Developed by: 
-RegisterNumber:  
+Developed by: 212221230072
+RegisterNumber: PAARKAVY B
 */
 ```
 
-## Output:
-![best fit line](sam.png)
+```
+# least square method
 
+import matplotlib.pyplot as plt
+x=[5,6,3,2,6,7,1,2]
+y=[2,3,6,5,8,3,5,8]
+plt.scatter(x,y);
+plt.plot(x,y)
+plt.show()
 
-## Result:
+import numpy as np
+import matplotlib.pyplot as plt
+
+# assign input
+
+X=np.array([0,1,2,3,4,5,6,7,8,9])
+Y=np.array([1,3,2,5,7,8,8,9,10,12])
+
+# mean values of input
+
+X_mean=np.mean(X)
+print(X_mean)
+Y_mean=np.mean(Y)
+print(Y_mean)
+
+num=0
+denum=0
+
+for i in range (len(X)):
+  num+=(X[i]-X_mean)*(Y[i]-Y_mean)
+  denum+=(X[i]-X_mean)**2
+  
+# find m
+
+m=num/denum
+print(m)
+
+# find b
+
+b=Y_mean-m*X_mean
+print(b)
+
+# find Y_pred
+
+Y_pred=m*X+b
+print(Y_pred)
+
+# plot graph
+
+plt.scatter(X,Y)
+plt.plot(X,Y_pred,color='green')
+plt.show()
+```
+
+# OUTPUT:
+![output](op1.png)
+
+![output](op2.png)
+
+![output](op3.png)
+
+![output](op4.png)
+
+# RESULT:
 Thus the univariate Linear Regression was implemented to fit a straight line using least squares using python programming.
