@@ -80,13 +80,12 @@ plt.show()
 ```
 
 # OUTPUT:
+
 ![output](op1.png)
 
 ![output](op2.png)
 
 ![output](op3.png)
-
-![output](op4.png)
 
 # RESULT:
 Thus the univariate Linear Regression was implemented to fit a straight line using least squares using python programming.
